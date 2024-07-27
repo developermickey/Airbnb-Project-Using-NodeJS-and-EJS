@@ -5,15 +5,22 @@
             <div class="col-8 offset-2 mb-5">
                 <h3 class="mb-5 mt-5">Create A New Listing</h3>
 
-                <form class="mb-5" method="POST" action="/listings">
+                <form class="mb-5 needs-validation" method="POST" action="/listings" novalidate>
                     <div class="mb-3">
                         <label for="title" class="form-label">Title</label>
-                        <input type="text" name="listing[title]" placeholder="Enter Title" class="form-control">
+                        <input type="text" name="listing[title]" placeholder="Enter Title" class="form-control" required>
+                        <div class="invalid-feedback">
+                            Please fill a title.
+                          </div>
+                          
                     </div>
                     <div class="mb-3">
                         <label for="description" class="form-label">Description</label>
                         <textarea type="text" name="listing[description]" placeholder="Enter description"
-                            class="form-control"></textarea>
+                            class="form-control" required></textarea>
+                            <div class="invalid-feedback">
+                                Please fill a description.
+                              </div>
                     </div>
                     <div class="mb-3">
                         <label for="image" class="form-label">Image Link</label>
@@ -23,17 +30,27 @@
 
                         <div class="mb-3 col-md-4">
                             <label for="price" class="form-label">Price</label>
-                            <input type="number" name="listing[price]" placeholder="1200" class="form-control">
+                            <input type="number" name="listing[price]" placeholder="1200" class="form-control" required>
+                            <div class="invalid-feedback">
+                                Please fill a price.
+                              </div>
                         </div>
                     
                         <div class="mb-3 col-md-8">
                             <label for="country" class="form-label">Country</label>
-                            <input type="text" name="listing[country]" placeholder="India" class="form-control">
+                            <input type="text" name="listing[country]" placeholder="India" class="form-control" required>
+                            <div class="invalid-feedback">
+                                Please fill a country.
+                              </div>
                         </div>
                     </div>
                     <div class="mb-3">
                         <label for="location" class="form-label">Location</label>
-                        <input type="text" name="listing[location]" placeholder="Jaipur, Rajasthan" class="form-control">
+                        <input type="text" name="listing[location]" placeholder="Jaipur, Rajasthan" class="form-control" required>
+                        <div class="invalid-feedback">
+                            Please fill a location.
+                          </div>
+                        
                     </div>
 
 

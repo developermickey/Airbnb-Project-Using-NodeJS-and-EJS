@@ -7,10 +7,12 @@ const listingSchema = new Schema({
     required: true
   },
   description: {
-    type: String
+    type: String,
+    required: true
   },
   image: {
     type: String,
+    
     default: "https://images.unsplash.com/photo-1453872302360-eed3c5f8ff66?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     set:
       (v) => v === ""
@@ -18,13 +20,16 @@ const listingSchema = new Schema({
         : v
   },
   price: {
-    type: Number
+    type: Number,
+    required: true
   },
   location: {
-    type: String
+    type: String,
+    required: true
   },
   country: {
-    type: String
+    type: String,
+    required: true
   }
 });
 
