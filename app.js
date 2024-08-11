@@ -111,7 +111,7 @@ app.use("/listings", listingRouter);
 app.use("/listings/:id/reviews", reviewRouter);
 app.use("/", userRouter);
 
-app.get('/', () => {
+app.get('/', (req, res) => {
   res.redirect("/listings");
 });
 
