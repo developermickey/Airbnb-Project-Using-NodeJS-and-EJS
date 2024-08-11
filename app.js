@@ -87,7 +87,9 @@ const listingRouter = require("./routes/listing");
 const reviewRouter = require("./routes/review");
 const userRouter = require("./routes/user");
 
-
+app.get('/', () => {
+  res.render("/listing/index");
+});
 
 app.use((req, res, next ) => {
   res.locals.success = req.flash("success");
