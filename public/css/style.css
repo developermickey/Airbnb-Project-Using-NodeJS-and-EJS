@@ -107,3 +107,11 @@ height: 30vh;
     padding-left: 0 !important;
     padding-right: 0 !important;
 }
+
+
+/* Map Style */
+
+#map { 
+height: 400px;
+width: 100vh;
+}

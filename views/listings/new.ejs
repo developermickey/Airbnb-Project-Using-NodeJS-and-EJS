@@ -5,7 +5,7 @@
             <div class="col-8 offset-2 mb-5">
                 <h3 class="mb-5 mt-5">Create A New Listing</h3>
 
-                <form class="mb-5 needs-validation" method="POST" action="/listings" novalidate>
+                <form class="mb-5 needs-validation" method="POST" action="/listings" enctype="multipart/form-data" novalidate>
                     <div class="mb-3">
                         <label for="title" class="form-label">Title</label>
                         <input type="text" name="listing[title]" placeholder="Enter Title" class="form-control" required>
@@ -22,9 +22,13 @@
                                 Please fill a description.
                               </div>
                     </div>
-                    <div class="mb-3">
+                    <!-- <div class="mb-3">
                         <label for="image" class="form-label">Image Link</label>
                         <input type="text" name="listing[image]" placeholder="Enter Image Url" class="form-control">
+                    </div> -->
+                    <div class="mb-3">
+                        <label for="image" class="form-label">Upload Image</label>
+                        <input type="file" name="listing[image]" class="form-control" required>
                     </div>
                     <div class="row">
 
