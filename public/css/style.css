@@ -10,7 +10,6 @@ body {
    flex: 1;
 }
 
-
 .navbar {
     height: 5rem;
     background: #fff;
@@ -98,7 +97,7 @@ body {
 /*  Show Page */
 
 .show-img {
-height: 30vh;
+height: 50vh;
 }
 .btns {
     display: flex !important;
