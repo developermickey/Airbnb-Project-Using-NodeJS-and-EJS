@@ -87,9 +87,7 @@ const listingRouter = require("./routes/listing");
 const reviewRouter = require("./routes/review");
 const userRouter = require("./routes/user");
 
-app.get('/', () => {
-  res.render("/listing/index");
-});
+
 
 app.use((req, res, next ) => {
   res.locals.success = req.flash("success");
@@ -113,6 +111,9 @@ app.use("/listings", listingRouter);
 app.use("/listings/:id/reviews", reviewRouter);
 app.use("/", userRouter);
 
+app.get('/', () => {
+  res.redirect("/listings");
+});
 
 
 // app.get("/testlisting", wrapAsync(async (req, res) => {
