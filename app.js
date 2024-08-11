@@ -66,10 +66,6 @@ const listingRouter = require("./routes/listing");
 const reviewRouter = require("./routes/review");
 const userRouter = require("./routes/user");
 
-// / Home Route
-app.get("/", (req, res) => {
-  res.send("Home");
-});
 
 
 app.use((req, res, next ) => {
